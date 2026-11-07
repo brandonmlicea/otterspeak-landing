@@ -2,23 +2,23 @@
 import Mark from "./Mark.astro";
 import { APP_URL, COURSES } from "../site";
 ---
-<section id="courses" class="border-y-2 border-line bg-surface" aria-label="Courses">
+<section id="courses" class="border-y border-line bg-surface" aria-label="Courses">
   <div class="mx-auto flex max-w-6xl items-center gap-2 px-2 py-4">
-    <button type="button" class="hidden size-10 shrink-0 place-items-center rounded-full text-2xl font-black text-muted hover:bg-sea-wash sm:grid" data-scroll="-1" aria-label="Scroll courses left">‹</button>
+    <button type="button" class="hidden size-10 shrink-0 place-items-center rounded-full text-2xl text-muted hover:bg-sea-wash sm:grid" data-scroll="-1" aria-label="Scroll courses left">‹</button>
     <ul id="courses-strip" class="strip flex flex-1 gap-2 overflow-x-auto px-3">
       {COURSES.map((c) => (
         <li class="shrink-0">
-          <a href={`${APP_URL}/setup?course=${c.id}`} class="flex items-center gap-3 rounded-xl px-3 py-2 text-sm font-extrabold tracking-wide text-muted uppercase hover:bg-sea-wash hover:text-sea-ink">
-            <Mark hue={c.hue} mark={c.mark} size={36} />{c.name}
+          <a href={`${APP_URL}/setup?course=${c.id}`} class="flex items-center gap-2.5 rounded-lg px-3 py-2 text-[15px] text-body hover:bg-sea-wash hover:text-sea-ink">
+            <Mark hue={c.hue} mark={c.mark} size={32} />{c.name}
           </a>
         </li>
       ))}
       <li class="shrink-0">
-        <a href={`${APP_URL}/welcome#course-anything`} class="flex items-center gap-3 rounded-xl px-3 py-2 text-sm font-extrabold tracking-wide text-muted uppercase hover:bg-sea-wash hover:text-sea-ink">
-          <Mark hue={280} mark="✦" size={36} />Anything
+        <a href={`${APP_URL}/welcome#course-anything`} class="flex items-center gap-2.5 rounded-lg px-3 py-2 text-[15px] text-body hover:bg-sea-wash hover:text-sea-ink">
+          <Mark hue={280} mark="✦" size={32} />Anything
         </a>
       </li>
     </ul>
-    <button type="button" class="hidden size-10 shrink-0 place-items-center rounded-full text-2xl font-black text-muted hover:bg-sea-wash sm:grid" data-scroll="1" aria-label="Scroll courses right">›</button>
+    <button type="button" class="hidden size-10 shrink-0 place-items-center rounded-full text-2xl text-muted hover:bg-sea-wash sm:grid" data-scroll="1" aria-label="Scroll courses right">›</button>
   </div>
 </section>

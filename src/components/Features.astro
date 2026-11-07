@@ -16,16 +16,16 @@ AI_MODEL=llama3.3`;
   <p class="mt-3">Get one wrong and it comes back at the end, with a short “why” whenever you ask.</p>
   <div slot="art" class="card p-5" aria-hidden="true">
     <div class="flex items-center gap-3">
-      <span class="text-2xl font-black text-muted">×</span>
+      <span class="text-2xl text-muted">×</span>
       <div class="bar flex-1"><span style="width:60%"></span></div>
-      <span class="font-extrabold text-bad-ink">♥ 5</span>
+      <span class="font-medium text-bad-ink">♥ 5</span>
     </div>
-    <p class="mt-5 text-lg font-extrabold">Translate this sentence</p>
+    <p class="mt-5 text-lg font-medium">Translate into Spanish</p>
     <div class="mt-3 flex items-center gap-3">
       <Pip size={64} />
       <div class="bubble text-base">I drink water</div>
     </div>
-    <div class="mt-4 flex min-h-12 flex-wrap gap-2 border-y-2 border-line py-2">
+    <div class="mt-4 flex min-h-12 flex-wrap gap-2 border-y border-line py-2">
       <span class="tile">Yo</span><span class="tile">bebo</span>
     </div>
     <div class="mt-4 flex flex-wrap justify-center gap-2">
@@ -38,16 +38,16 @@ AI_MODEL=llama3.3`;
   <p>A streak grows every day you learn. Hearts keep you careful, XP keeps score, and three small quests a day give you a reason to come back.</p>
   <p class="mt-3">Pick a streak goal and Pip will cheer you all the way there.</p>
   <div slot="art" class="card p-5" aria-hidden="true">
-    <div class="flex items-center justify-around text-2xl font-black">
+    <div class="flex items-center justify-around text-2xl font-medium">
       <span class="flex items-center gap-1 text-coral-ink"><svg viewBox="0 0 24 24" class="size-8"><path d="M12 2c1 4 6 6 6 12a6 6 0 0 1-12 0c0-3 2-5 3-6 0 2 1 3 2 3 0-3-1-6 1-9z" fill="var(--os-coral)"></path><path d="M12 12c1 2 3 3 3 5a3 3 0 0 1-6 0c0-1 1-2 1-3 1 1 2 0 2-2z" fill="var(--os-sun)"></path></svg>14</span>
       <span class="flex items-center gap-1"><svg viewBox="0 0 24 24" class="size-8"><path d="M13 2 4 14h7l-1 8 9-12h-7z" fill="var(--os-sun)"></path></svg>320</span>
       <span class="flex items-center gap-1 text-bad-ink"><svg viewBox="0 0 24 24" class="size-8"><path d="M12 21s-8-5-8-11a4.5 4.5 0 0 1 8-3 4.5 4.5 0 0 1 8 3c0 6-8 11-8 11z" fill="var(--os-heart)"></path></svg>5</span>
     </div>
-    <p class="mt-6 font-extrabold">Daily quests</p>
+    <p class="mt-6 eyebrow">Daily quests</p>
     <ul class="mt-3 grid gap-4">
       {quests.map(([label, pct]) => (
         <li>
-          <p class="font-bold">{label}</p>
+          <p>{label}</p>
           <div class="bar mt-1.5"><span style={`width:${pct}%;background:var(--os-sun)`}></span></div>
         </li>
       ))}
@@ -59,14 +59,14 @@ AI_MODEL=llama3.3`;
   <p>Sixteen languages and math are one tap away. Or type a topic, like chess openings, music theory or Python, and Pip lays out a whole course of units for it.</p>
   <p class="mt-3">Finish every unit and Pip writes the next ones.</p>
   <div slot="art" class="card relative overflow-hidden p-5" aria-hidden="true">
-    <div class="rounded-2xl border-b-4 px-4 py-3 text-white" style="background:oklch(0.52 0.09 187);border-color:oklch(0.42 0.09 187)">
-      <p class="text-xs font-extrabold tracking-wide uppercase">Unit 1</p>
-      <p class="text-lg font-extrabold">Opening principles</p>
+    <div class="rounded-xl border border-line bg-sea-wash px-4 py-3">
+      <p class="eyebrow">Unit 1</p>
+      <p class="text-lg font-medium text-sea-ink">Opening principles</p>
     </div>
     <ol class="mt-6 flex flex-col items-center gap-4">
       {path.map((x, i) => (
         <li style={`transform:translateX(${x}px)`}>
-          <span class:list={["grid size-14 place-items-center rounded-full border-b-[5px] text-xl font-black", i <= 2 ? "border-[var(--os-sea-edge)] bg-sea text-on-sea" : "border-line bg-locked text-muted", i === 2 && "ring-8 ring-sea-wash"]}>{i < 2 ? "✓" : i === 2 ? "★" : i + 1}</span>
+          <span class:list={["grid size-14 place-items-center rounded-full border text-xl font-medium", i <= 2 ? "btn-sea" : "border-line bg-locked text-muted", i === 2 && "ring-[6px] ring-sea-wash"]}>{i < 2 ? "✓" : i === 2 ? "★" : i + 1}</span>
         </li>
       ))}
     </ol>
@@ -79,9 +79,9 @@ AI_MODEL=llama3.3`;
   <p>Otterspeak is MIT licensed. It talks to any OpenAI-compatible API: Celeris by default, or Ollama, vLLM, Together, OpenRouter and the rest. Change two lines and deploy it on Cloudflare.</p>
   <p class="mt-3">Your progress stays on your device. No account needed.</p>
   <div slot="art" class="card overflow-hidden" aria-hidden="true">
-    <p class="border-b-2 border-line px-4 py-2 font-mono text-sm font-bold text-muted">wrangler.json</p>
+    <p class="border-b border-line px-4 py-2 font-mono text-sm text-muted">wrangler.json</p>
     <pre class="p-4 font-mono text-[13px] leading-relaxed whitespace-pre-wrap break-all text-sea-ink">{code}</pre>
-    <p class="border-y-2 border-line px-4 py-2 font-mono text-sm font-bold text-muted">.dev.vars, with Ollama</p>
+    <p class="border-y border-line px-4 py-2 font-mono text-sm text-muted">.dev.vars, with Ollama</p>
     <pre class="p-4 font-mono text-[13px] leading-relaxed whitespace-pre-wrap break-all text-coral-ink">{local}</pre>
   </div>
 </Feature>

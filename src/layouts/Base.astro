@@ -13,29 +13,29 @@ const description = "Bite-sized lessons in languages, math or any topic you type
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
     <meta name="description" content={description} />
-    <meta name="theme-color" content="#0b7d75" />
+    <meta name="theme-color" content="#187c49" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <script is:inline>document.documentElement.classList.add("js")</script>
   </head>
   <body>
     <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-surface focus:px-4 focus:py-2">Skip to content</a>
-    <header id="nav" class="sticky top-0 z-20 border-b-2 border-line bg-canvas/90 backdrop-blur">
+    <header id="nav" class="sticky top-0 z-20 border-b border-line bg-canvas/85 backdrop-blur">
       <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-3">
-        <a href="/" id="logo" class="flex items-center gap-2 text-2xl font-black tracking-tight text-sea-ink">
-          <Pip size={40} />
+        <a href="/" id="logo" class="flex items-center gap-2 font-serif text-[28px] leading-none tracking-tight text-ink">
+          <Pip size={36} />
           otterspeak
         </a>
-        <nav class="flex items-center gap-5 text-sm font-extrabold tracking-wide uppercase">
+        <nav class="flex items-center gap-5 text-[15px]">
           <a href={GITHUB} id="nav-github" class="text-muted hover:text-sea-ink">GitHub</a>
-          <a href={`${APP_URL}/welcome`} id="nav-start" class="btn btn-sea hidden h-10 px-4 text-sm sm:inline-flex">Get started</a>
+          <a href={`${APP_URL}/welcome`} id="nav-start" class="btn btn-sea hidden h-9 px-4 text-sm sm:inline-flex">Get started</a>
         </nav>
       </div>
     </header>
     <main id="main"><slot /></main>
-    <footer id="footer" class="border-t-2 border-line">
-      <div class="mx-auto flex max-w-6xl flex-col gap-4 px-5 py-10 text-sm font-semibold text-muted sm:flex-row sm:items-center sm:justify-between">
-        <nav class="flex flex-wrap gap-x-6 gap-y-2 font-extrabold">
+    <footer id="footer" class="border-t border-line">
+      <div class="mx-auto flex max-w-6xl flex-col gap-4 px-5 py-10 text-sm text-muted sm:flex-row sm:items-center sm:justify-between">
+        <nav class="flex flex-wrap gap-x-6 gap-y-2 text-ink">
           <a href={APP_URL} class="hover:text-sea-ink">App</a>
           <a href={GITHUB} class="hover:text-sea-ink">GitHub</a>
           <a href={LANDING_SRC} class="hover:text-sea-ink">Landing source</a>

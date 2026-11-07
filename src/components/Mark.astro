@@ -2,4 +2,4 @@
 interface Props { hue: number; mark: string; size?: number }
 const { hue, mark, size = 40 } = Astro.props;
 ---
-<span aria-hidden="true" class="inline-grid shrink-0 place-items-center rounded-xl font-extrabold text-white" style={`width:${size}px;height:${size * 0.74}px;font-size:${size * 0.32}px;background:oklch(0.52 0.13 ${hue});box-shadow:inset 0 -${size / 14}px 0 oklch(0.42 0.12 ${hue})`}>{mark}</span>
+<span aria-hidden="true" class="inline-grid shrink-0 place-items-center rounded-lg font-medium text-white" style={`width:${size}px;height:${size * 0.74}px;font-size:${size * 0.32}px;background:linear-gradient(oklch(0.52 0.09 ${hue}),oklch(0.47 0.09 ${hue}));border:1px solid oklch(0.42 0.08 ${hue});box-shadow:inset 0 1px 0 oklch(1 0 0 / 0.2)`}>{mark}</span>
