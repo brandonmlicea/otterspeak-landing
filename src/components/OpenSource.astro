@@ -1,0 +1,18 @@
+---
+import { GITHUB, LANDING_SRC } from "../site";
+const clone = `git clone ${GITHUB}`;
+---
+<section id="open-source" class="bg-sea-wash">
+  <div class="mx-auto max-w-3xl px-5 py-16 text-center md:py-20" data-reveal>
+    <h2 class="text-[clamp(1.8rem,1.4rem+1.6vw,2.5rem)] text-sea-ink">Free, open and yours to change</h2>
+    <p class="mx-auto mt-3 max-w-xl text-lg font-semibold text-ink">Fork it, rename the otter, teach your own subject. The app and this page are both on GitHub.</p>
+    <div class="card mx-auto mt-8 flex max-w-xl items-center gap-3 p-2 pl-4 text-left">
+      <code class="min-w-0 flex-1 truncate font-mono text-sm font-bold">{clone}</code>
+      <button type="button" id="copy-clone" class="btn btn-sea h-10 px-4 text-sm" data-copy={clone}><span data-copy-label>Copy</span></button>
+    </div>
+    <div class="mt-6 flex flex-wrap justify-center gap-3">
+      <a href={GITHUB} id="repo-app" class="btn btn-ghost normal-case">otterspeak</a>
+      <a href={LANDING_SRC} id="repo-landing" class="btn btn-ghost normal-case">otterspeak-landing</a>
+    </div>
+  </div>
+</section>

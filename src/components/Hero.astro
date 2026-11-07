@@ -1,0 +1,25 @@
+---
+import Pip from "./Pip.astro";
+import Mark from "./Mark.astro";
+import { APP_URL } from "../site";
+---
+<section id="hero" class="mx-auto grid max-w-6xl items-center gap-10 px-5 pt-12 pb-16 md:grid-cols-2 md:pt-20 md:pb-24">
+  <div class="relative mx-auto grid aspect-square w-full max-w-[26rem] place-items-center" aria-hidden="true">
+    <div class="absolute inset-[8%] rounded-full bg-sea-wash"></div>
+    <span class="absolute top-[6%] left-[8%]" data-float><Mark hue={30} mark="ES" size={64} /></span>
+    <span class="absolute top-[14%] right-[4%]" data-float><Mark hue={190} mark="+−" size={56} /></span>
+    <span class="absolute bottom-[14%] left-[2%]" data-float><Mark hue={15} mark="あ" size={52} /></span>
+    <span class="absolute right-[10%] bottom-[8%]" data-float><Mark hue={255} mark="FR" size={60} /></span>
+    <svg class="absolute top-[40%] left-[2%] size-8" viewBox="0 0 24 16" data-float><ellipse cx="12" cy="8" rx="11" ry="7" fill="var(--os-sea)" /><ellipse cx="8" cy="5" rx="3" ry="1.6" fill="#fff" opacity=".45" /></svg>
+    <svg class="absolute top-[4%] left-[48%] size-6" viewBox="0 0 24 16" data-float><ellipse cx="12" cy="8" rx="11" ry="7" fill="var(--os-coral)" /></svg>
+    <div class="relative" data-bob><Pip size={300} class="max-w-[68vw]" /></div>
+  </div>
+  <div class="text-center md:text-left">
+    <h1 class="text-[clamp(2.2rem,1.6rem+2.6vw,3.4rem)] leading-[1.08]" data-hero-in>Learn anything in five minutes a day.</h1>
+    <p class="mx-auto mt-5 max-w-md text-lg font-semibold text-muted md:mx-0" data-hero-in>Pip the otter turns a language, math or any topic you pick into short, game-like lessons that fit your level.</p>
+    <div class="mx-auto mt-8 grid max-w-sm gap-3 md:mx-0" data-hero-in>
+      <a href={`${APP_URL}/welcome`} id="hero-start" class="btn btn-sea">Get started</a>
+      <a href={`${APP_URL}/learn`} id="hero-continue" class="btn btn-ghost">I already have progress</a>
+    </div>
+  </div>
+</section>
